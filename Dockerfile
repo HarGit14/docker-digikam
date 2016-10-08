@@ -37,7 +37,7 @@ export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 add-apt-repository -y ppa:philip5/extra && \
 apt-get update && \
 apt-get install -y \
-digikam
+digikam5
 
 #########################################
 ##          GUI APP INSTALL            ##
