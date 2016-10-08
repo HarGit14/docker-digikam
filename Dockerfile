@@ -24,17 +24,17 @@ ENV HEIGHT=720
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
-RUN \
+# RUN \
 #########################################
 ##    REPOSITORIES AND DEPENDENCIES    ##
 #########################################
-echo 'deb http://archive.ubuntu.com/ubuntu xenial main universe restricted' > /etc/apt/sources.list && \
-echo 'deb http://archive.ubuntu.com/ubuntu xenial-updates main universe restricted' >> /etc/apt/sources.list && \
-mkdir -p /etc/my_init.d && \
+RUN echo 'deb http://archive.ubuntu.com/ubuntu xenial main universe restricted' > /etc/apt/sources.list && 
+RUN echo 'deb http://archive.ubuntu.com/ubuntu xenial-updates main universe restricted' >> /etc/apt/sources.list && 
+RUN mkdir -p /etc/my_init.d && 
 
 # Install packages needed for app
-export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
-add-apt-repository -y ppa:philip5/extra && \
+RUN export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && 
+RUN add-apt-repository -y ppa:philip5/extra && \
 apt-get update && \
 apt-get install -y \
 digikam5
