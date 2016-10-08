@@ -1,3 +1,4 @@
+#Update to digikam 5
 #DigiKam
 
 This is an X application accessible in a browser window.
