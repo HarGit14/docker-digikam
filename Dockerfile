@@ -34,10 +34,9 @@ RUN mkdir -p /etc/my_init.d
 
 # Install packages needed for app
 RUN export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive
-RUN add-apt-repository -y ppa:philip5/extra && \
-apt-get update && \
-apt-get install -y \
-digikam5
+RUN add-apt-repository -y ppa:philip5/extra
+RUN apt-get update
+RUN apt-get install -y digikam5
 
 #########################################
 ##          GUI APP INSTALL            ##
