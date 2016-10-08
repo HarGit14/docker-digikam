@@ -36,7 +36,7 @@ RUN mkdir -p /etc/my_init.d
 RUN export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive
 RUN add-apt-repository -y ppa:philip5/extra
 RUN apt-get update
-RUN apt-get install -y digikam5
+RUN apt-get install -y digikam
 
 #########################################
 ##          GUI APP INSTALL            ##
